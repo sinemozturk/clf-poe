@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CLF - Point of Entry</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f6f9; margin: 0; padding: 0; }
+    .top-bar {
+      background: #3f5972;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .dropdown {
+      background: white;
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-weight: bold;
+      color: #333;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      border: none;
+    }
+    .tabs {
+      background: #e4e9f0;
+      padding: 0 20px;
+      display: flex;
+      gap: 4px;
+    }
+    .tab {
+      padding: 10px 15px;
+      background: #d7e3f4;
+      border: 1px solid #a6bdd9;
+      border-bottom: none;
+      border-radius: 4px 4px 0 0;
+      font-weight: bold;
+      color: #000;
+    }
+    .tab.active {
+      background: white;
+      border-bottom: 1px solid white;
+    }
+    main { display: flex; flex-wrap: wrap; padding: 20px; gap: 20px; }
+    .panel {
+      background: white;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      flex: 1 1 calc(33% - 40px);
+      min-width: 300px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    .panel h3 {
+      background: #d7e3f4;
+      margin: -10px -10px 10px -10px;
+      padding: 10px;
+      font-size: 16px;
+      border-bottom: 1px solid #ccc;
+    }
+    .file-entry { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px solid #eee; font-size: 14px; }
+    .file-entry:last-child { border-bottom: none; }
+    .drop-zone { border: 2px dashed #bbb; padding: 40px; text-align: center; color: #aaa; font-size: 16px; }
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      padding-top: 10px;
+    }
+    .pagination span {
+      padding: 5px 10px;
+      background: #f0f0f0;
+      border-radius: 3px;
+      font-size: 13px;
+      color: #000;
+      border: 1px solid #ccc;
+    }
+    .pagination span.active {
+      background: #007bff;
+      color: white;
+      border-color: #007bff;
+    }
+    footer { padding: 20px; text-align: center; color: #999; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <select class="dropdown">
+      <option selected>CLF - Point of Entry</option>
+    </select>
+  </div>
+  <div class="tabs">
+    <div class="tab active">Requisition File Management</div>
+    <div class="tab">Dashboard</div>
+    <div class="tab">Requirement Details</div>
+  </div>
+  <main>
+    <div class="panel drop-zone">
+      <p>📤 Drag and drop some files here,<br>or click to select files</p>
+    </div>
+
+    <div class="panel">
+      <h3>Awaiting Processing</h3>
+      <div class="file-entry"><span>file_name_1</span><span>06/23/2025 19:57:57</span></div>
+      <div class="file-entry"><span>file_name_2</span><span>05/22/2025 18:44:50</span></div>
+      <div class="file-entry"><span>file_name_3</span><span>05/21/2025 13:32:14</span></div>
+      <div class="pagination">
+        <span class="active">1</span><span>2</span><span>3</span><span>...</span><span>6</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>In Process</h3>
+      <div class="file-entry"><span>No data</span></div>
+      <div class="pagination">
+        <span class="active">1</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Sourced to CLO</h3>
+      <div class="file-entry"><span>file_name_7</span><span>05/22/2025 17:25:58</span></div>
+      <div class="file-entry"><span>file_name_8</span><span>05/22/2025 13:46:04</span></div>
+      <div class="pagination">
+        <span class="active">1</span><span>2</span><span>3</span><span>...</span><span>6</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Sourced to Supply System</h3>
+      <div class="file-entry"><span>file_name_11</span><span>03/03/2025 19:45:27</span></div>
+      <div class="file-entry"><span>file_name_12</span><span>02/11/2025 21:15:45</span></div>
+      <div class="pagination">
+        <span class="active">1</span><span>2</span><span>3</span><span>...</span><span>7</span>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h3>Rejected Files</h3>
+      <div class="file-entry"><span>file_name_15</span><span>05/22/2025 17:25:58</span></div>
+      <div class="file-entry"><span>file_name_16</span><span>05/21/2025 18:16:23</span></div>
+      <div class="pagination">
+        <span class="active">1</span><span>2</span><span>3</span>
+      </div>
+    </div>
+  </main>
+  <footer>&copy; 2025 File Management System</footer>
+</body>
+</html>
